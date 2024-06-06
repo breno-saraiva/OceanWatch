@@ -1,20 +1,63 @@
+import { useState } from "react";
 import { praias } from "../../../../../../shared/mock/selectPraias";
+import { createPostProp } from "../../../../../../shared/types/createPost";
 import { Input } from "../../../../../../shared/ui/input";
 import { Select } from "../../../../../../shared/ui/select";
 import { TextArea } from "../../../../../../shared/ui/textArea";
 
-const FormDescription = () => {
+type ProjectFormProps = {
+  postData?: createPostProp;
+  handleOnSubmit: (e: createPostProp) => void;
+};
+
+const FormDescription = ({ postData, handleOnSubmit }: ProjectFormProps) => {
+  const [post, setPost] = useState(postData || {});
+
+  function submit(e: React.FormEvent) {
+    e.preventDefault();
+    handleOnSubmit(post as createPostProp);
+    console.log("data", post);
+  }
+
+  function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
+    e.persist();
+    setPost({ ...post, nome_pessoa: e.target.value });
+  }
+
+  function handleSelect(e: React.ChangeEvent<HTMLSelectElement>) {
+    e.persist();
+    setPost({ ...post, location: e.target.value });
+  }
+
+  function handleTextArea(e: React.ChangeEvent<HTMLTextAreaElement>) {
+    e.persist();
+    setPost({ ...post, comentario: e.target.value });
+  }
+
   return (
     <div className="bg-sky-500 p-6 rounded-lg border-none border-4">
-      <form action="">
+      <form onSubmit={submit}>
         <div>
-          <Input name="nome" title="Nome" type="text" />
+          <Input OnChange={handleInput} name="nome" title="Nome" type="text" />
         </div>
         <div>
-          <Select title="Selecione a praia" options={praias} />
+          <Select
+            Onchange={handleSelect}
+            title="Selecione a praia"
+            options={praias}
+          />
         </div>
         <div>
-          <TextArea title="Descreva o ocorrido" rows={4} cols={50} />
+          <TextArea
+            name="comentario"
+            OnChange={handleTextArea}
+            title="Descreva o ocorrido"
+            rows={4}
+            cols={50}
+          />
+        </div>
+        <div>
+          <button type="submit">Criar Post</button>
         </div>
       </form>
     </div>
