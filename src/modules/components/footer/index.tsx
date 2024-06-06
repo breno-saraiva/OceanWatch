@@ -1,9 +1,5 @@
 const Footer = () => {
-  return (
-    <>
-      <nav></nav>
-    </>
-  );
+  return <div>Footer</div>;
 };
 
 export { Footer };

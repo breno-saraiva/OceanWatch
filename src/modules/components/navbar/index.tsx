@@ -12,13 +12,7 @@ const NavBar = () => {
             <Link to="/home">Home</Link>
           </li>
           <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/contato">contato</Link>
-          </li>
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/empresas">empresas</Link>
-          </li>
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/project">Project</Link>
+            <Link to="/recursos">recursos</Link>
           </li>
         </ul>
       </div>
