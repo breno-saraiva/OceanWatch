@@ -1,7 +1,9 @@
+import { FormDescription } from "../components/form";
+
 function Home() {
   return (
-    <div className="">
-      <h1>Home</h1>
+    <div className="flex justify-center items-center">
+      <FormDescription />
     </div>
   );
 }
