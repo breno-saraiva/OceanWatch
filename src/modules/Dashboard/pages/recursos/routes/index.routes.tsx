@@ -1,5 +1,5 @@
 import { RouteObject } from "react-router-dom";
-import { Recursos } from "../page";
+import Recursos from "../page";
 
 const recursosPage: RouteObject[] = [
   {
