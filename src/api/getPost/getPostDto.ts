@@ -3,4 +3,5 @@ export type getPostDto = {
   comentario: string;
   coordenada: string;
   endereco: string;
+  id:string;
 };
