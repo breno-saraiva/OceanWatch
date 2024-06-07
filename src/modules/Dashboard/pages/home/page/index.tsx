@@ -39,7 +39,7 @@ function Home() {
     <div className="grid grid-cols-3  gap-5 p-8">
       <div className="col-span-2 rounded-lg flex justify-center items-center">
         <img
-          src={`https://maps.googleapis.com/maps/api/staticmap?center=Santos,SP&zoom=7&size=700x450&markers=color:red%7C${marcadores.join(
+          src={`https://maps.googleapis.com/maps/api/staticmap?center=Santos,SP&zoom=7&size=700x450&markers=size:small%7Ccolor:red%7C${marcadores.join(
             "%7C"
           )}&key=AIzaSyDHTihUvCtc9auitAv5P8dD_7Z1evwRJZI`}
           alt="imgMaps"
@@ -51,11 +51,13 @@ function Home() {
       <div className="bg-[#8AB4F8] col-span-2 rounded-md">
         {comentarios.length > 0 &&
           comentarios.map((item) => (
-            <Posts
-              Localização={item.endereco}
-              name={item.nome_pessoa}
-              description={item.comentario}
-            />
+            <div>
+              <Posts
+                Localização={item.endereco}
+                name={item.nome_pessoa}
+                description={item.comentario}
+              />
+            </div>
           ))}
       </div>
     </div>
