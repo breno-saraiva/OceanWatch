@@ -1,7 +1,6 @@
-import React from "react";
 import bg from "../../../../../assets/tartaruga.jpg";
 
-const Recursos: React.FC = () => {
+const Recursos = () => {
   return (
     <div className="relative h-screen">
       <img
