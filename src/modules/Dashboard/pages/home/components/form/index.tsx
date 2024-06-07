@@ -35,10 +35,10 @@ const FormDescription = ({ postData, handleOnSubmit }: ProjectFormProps) => {
   }
 
   return (
-    <div className="bg-sky-500 p-6 rounded-lg border-none border-4">
+    <div className="bg-[#3586FF] p-6 rounded-lg border-none border-4">
       <form onSubmit={submit}>
         <div>
-          <Input OnChange={handleInput} name="nome" title="Nome" type="text" />
+          <Input OnChange={handleInput} name="nome" title="Nome" type="text"/>
         </div>
         <div>
           <Select
@@ -57,7 +57,9 @@ const FormDescription = ({ postData, handleOnSubmit }: ProjectFormProps) => {
           />
         </div>
         <div>
-          <button type="submit">Criar Post</button>
+        <button type="submit"className="border border-white rounded-md px-4 py-2 transition duration-300 ease-in-out bg-white text-[#3586FF] hover:text-white hover:bg-[#3586FF]">
+        Criar Post
+        </button>
         </div>
       </form>
     </div>
