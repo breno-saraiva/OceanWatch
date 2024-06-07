@@ -2,20 +2,36 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <nav className="flex items-center justify-between py-4 px-6 bg-[#222] p-4 text-white">
-      <div>
-        <Link to="/home">{/* <img src={logo} /> */}</Link>
+    <nav className="py-4 px-[10%] flex justify-between items-center bg-[#3586FF] shadow-md z-10">
+      <div className="logo">
+        <h1 className="text-[1.6rem] bg-clip-text text-transparent bg-gradient-to-r from-[#05cbf3fd] to-[#fefefffb]">
+          <b>OceanWatch.</b>
+        </h1>
       </div>
-      <div>
-        <ul className="flex ">
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/home">Home</Link>
-          </li>
-          <li className="mr-4 hover:text-[#FFBB33]">
-            <Link to="/recursos">recursos</Link>
-          </li>
-        </ul>
-      </div>
+      <p className="navTxt text-white hidden md:block justify-between items-center">
+        Preserve o Azul! Cuide das Praias e Oceanos com o{" "}
+        <b>
+          <u>OceanWatch.</u>
+        </b>
+      </p>
+      <ul className="flex list-none">
+        <li className="ml-[1.5rem]">
+          <Link
+            to="/home"
+            className="text-white text-[95%] font-normal px-2 py-1 rounded transition duration-[400ms] hover:bg-[rgba(7,45,106,0.738)]"
+          >
+            Home
+          </Link>
+        </li>
+        <li className="ml-[1.5rem]">
+          <Link
+            to="/recursos"
+            className="text-white text-[95%] font-normal px-2 py-1 rounded transition duration-[400ms] hover:bg-[rgba(7,45,106,0.738)]"
+          >
+            Recursos Educativos
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };

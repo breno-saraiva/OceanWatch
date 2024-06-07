@@ -17,7 +17,7 @@ const TextArea: React.FC<TextAreaProps> = ({
 }) => {
   return (
     <div className="flex flex-col mb-4">
-      <label htmlFor={name} className="mb-[.6em] font-bold">
+      <label htmlFor={name} className="mb-[.6em] font-bold text-white">
         {title}
       </label>
       <textarea

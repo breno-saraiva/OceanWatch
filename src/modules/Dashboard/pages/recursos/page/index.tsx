@@ -1,7 +1,7 @@
 function Recursos() {
   return (
     <>
-      <h1>Recursos</h1>
+      <h1>CONTEUDO</h1>
     </>
   );
 }
