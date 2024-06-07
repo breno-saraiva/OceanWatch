@@ -1,7 +1,7 @@
 import { createPostDto } from "./createPostDto";
 
 export const createPost = async (post: createPostDto) => {
-  await fetch("", {
+  await fetch("https://global-solution-1-2024.vercel.app/posts", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
