@@ -9,10 +9,7 @@ const NavBar = () => {
         </h1>
       </div>
       <p className="navTxt text-white hidden md:block justify-between items-center">
-        Preserve o Azul! Cuide das Praias e Oceanos com o{" "}
-        <b>
-          <u>OceanWatch.</u>
-        </b>
+        Preserve o Azul! Cuide das Praias e Oceanos com o <b>OceanWatch.</b>
       </p>
       <ul className="flex list-none">
         <li className="ml-[1.5rem]">
