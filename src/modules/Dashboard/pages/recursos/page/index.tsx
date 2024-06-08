@@ -2,18 +2,18 @@ import bg from "../../../../../assets/tartaruga.jpg";
 
 const Recursos = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-scren">
       <img
         src={bg}
         alt="Imagem do Oceano"
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 flex flex-wrap justify-center items-center bg-black bg-opacity-80 text-white">
+      <div className="h-full absolute inset-0 flex flex-wrap justify-center items-center bg-black bg-opacity-80 text-white">
         <div className="max-w-4xl px-8 text-center">
           <h1 className="text-6xl font-bold mb-8">Recursos Educativos</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-xl font-bold mb-4">
                 Documentários e Filmes:
               </h2>
               <p className="text-lg leading-relaxed mb-4">
@@ -23,7 +23,7 @@ const Recursos = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-xl font-bold mb-4">
                 Websites e Aplicativos:
               </h2>
               <p className="text-lg leading-relaxed mb-4">
@@ -33,7 +33,7 @@ const Recursos = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-xl font-bold mb-4">
                 Centros de Educação Ambiental:
               </h2>
               <p className="text-lg leading-relaxed mb-4">
@@ -42,7 +42,7 @@ const Recursos = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-xl font-bold mb-4">
                 Livros e Material Didático:
               </h2>
               <p className="text-lg leading-relaxed mb-4">
@@ -52,7 +52,7 @@ const Recursos = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-xl font-bold mb-4">
                 Atividades Locais e Voluntariado:
               </h2>
               <p className="text-lg leading-relaxed mb-4">
