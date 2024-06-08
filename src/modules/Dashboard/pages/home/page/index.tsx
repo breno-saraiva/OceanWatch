@@ -50,7 +50,7 @@ function Home() {
       </div>
       <div className="bg-[#8AB4F8] col-span-2 rounded-md">
         {comentarios.length > 0 &&
-          comentarios.map((item) => (
+          comentarios.reverse().map((item) => (
             <div>
               <Posts
                 Localização={item.endereco}
