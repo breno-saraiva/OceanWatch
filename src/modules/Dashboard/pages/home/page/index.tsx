@@ -15,9 +15,11 @@ type comentariosProps = {
 
 function Home() {
   const [comentarios, setComentarios] = useState<comentariosProps[]>([]);
+  const [reload, setReload] = useState(false);
 
   async function handleSubmit(data: createPostProp) {
     await createPost(data);
+    setReload(true);
   }
 
   async function getcomentarios() {
@@ -27,7 +29,7 @@ function Home() {
 
   useEffect(() => {
     getcomentarios();
-  }, []);
+  }, [reload]);
   console.log("renderizou");
 
   const marcadores: string[] = [];
